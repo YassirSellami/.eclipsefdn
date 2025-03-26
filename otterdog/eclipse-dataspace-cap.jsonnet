@@ -34,6 +34,9 @@ orgs.newOrg('technology.dataspace-cap', 'eclipse-dataspace-cap') {
       description: "Conformity Assessment Policy and Credential Profile - Ontology",
       web_commit_signoff_required: true,
       gh_pages_build_type: "workflow",
+      workflows+: {
+          default_workflow_permissions: "write"
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
